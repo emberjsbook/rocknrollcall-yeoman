@@ -1,0 +1,1 @@
+RocknrollcallYeoman.ApplicationAdapter = DS.FixtureAdapter;
