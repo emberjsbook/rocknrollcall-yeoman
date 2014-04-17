@@ -19,7 +19,10 @@
         <h3>Artists</h3>
         <ul class="search-results artists">
           {{#each RocknrollcallYeoman.dummySearchResultsArtists}}
-            <li><a {{action 'viewedArtist' this}} href="#">{{name}}</a></li>
+            <li>
+              <a {{action 'viewedArtist' this}} href="#">{{name}}</a>
+            </li>
+            {{hotttnesss-badge hotttnesss}}
           {{/each}}
         </ul>
         <h3>Songs</h3>
