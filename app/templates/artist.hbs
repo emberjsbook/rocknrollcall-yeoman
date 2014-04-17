@@ -1,0 +1,32 @@
+<div class="entity-artist page-container">
+  <div class="artist-bio-lockup clearfix">
+    {{#if model.image}}
+      {{#if model.license}}
+        {{#if model.license.url}}
+          <a {{bind-attr href="model.license.url"}}>
+            <img {{bind-attr src="model.image.url"}} class="pull-right">
+          </a>
+        {{else}}
+          <img {{bind-attr src="model.image.url"}} class="pull-right">
+        {{/if}}
+      {{else}}
+        <img {{bind-attr src="model.image.url"}} class="pull-right">
+      {{/if}}
+    {{/if}}
+    <h3 class="fancy">{{model.name}}</h3>
+    <h4>
+      {{hotttnesss-badge model.hotttnesss}}
+    </h4>
+    <p class="bio pull-left">Biography(from {{model.biography.site}}): {{model.biography.text}}</p>
+    <a {{bind-attr href="model.biography.url"}} class="pull-left">Read more</a>
+  </div>
+
+  {{#if model.videos.length}}
+  <div class="videos">
+    <h5>Videos</h5>
+    {{#each video in videos}}
+      <a {{bind-attr href="video.url"}}><img {{bind-attr src="video.image_url"}} class="video-thumbnail"></a>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
