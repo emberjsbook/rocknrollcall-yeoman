@@ -18,14 +18,9 @@
       <div class="results col-md-10">
         <h3>Artists</h3>
         <ul class="search-results artists">
-          <li><a href="#">Tom Waits</a></li>
-          <li><a href="#">Tom Waits w; Keith Richards</a></li>
-          <li><a href="#">Tom Waits/Keith Richards</a></li>
-          <li><a href="#">Tom Waits [Vocalist] &amp; Orchestra [Orchestra] &amp; Michael Riesman [Conductor] &amp; Bryars, Gavin [Composer]</a></li>
-          <li><a href="#">Tom Waits [Vocals] &amp; Gavin Bryars Ensemble [Ensemble]</a></li>
-          <li><a href="#">Tom Waits [Vocalist]; Orchestra [Orchestra]; Michael Riesman [Conductor]</a></li>
-          <li><a href="#">Tom Waits [Vocals] &amp; Gavin Bryars Ensemble [Ensemble] &amp; Bryars, Gavin [Composer]</a></li>
-          <li><a href="#">Tom Waits [Vocalist], Orchestra [Orchestra] &amp; Michael Riesman [Conductor]</a></li>
+          {{#each RocknrollcallYeoman.dummySearchResultsArtists}}
+            <li><a href="#">{{name}}</a></li>
+          {{/each}}
         </ul>
 
         <h3>Songs</h3>
