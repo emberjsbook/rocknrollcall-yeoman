@@ -19,10 +19,13 @@
         <h3>Artists</h3>
         <ul class="search-results artists">
           {{#each RocknrollcallYeoman.dummySearchResultsArtists}}
-            <li><a href="#">{{name}}</a></li>
+            {{#if nickname}}
+                <li><a href="#">{{nickname}}, AKA "{{name}}"</a></li>
+            {{else}}
+              <li><a href="#">{{name}}</a></li>
+            {{/if}}
           {{/each}}
         </ul>
-
         <h3>Songs</h3>
         <ul class="search-results songs">
           <li><a href="#">"Tom Waits," by Panic Strikes a Chord</a></li>
