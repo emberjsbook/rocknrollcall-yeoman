@@ -1,5 +1,7 @@
 var RocknrollcallYeoman = window.RocknrollcallYeoman = Ember.Application.create();
 
+RocknrollcallYeoman.applicationName = "Rock'n'Roll Call";
+
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/store');
