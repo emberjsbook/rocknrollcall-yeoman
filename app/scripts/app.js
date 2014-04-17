@@ -6,7 +6,6 @@ RocknrollcallYeoman.dummySearchResultsArtists = [
   {
     id: 1,
     name: 'Tom Waits',
-    nickname: 'Tommy',
     type: 'artist',
     enid: 'ARERLPG1187FB3BB39'
   },
