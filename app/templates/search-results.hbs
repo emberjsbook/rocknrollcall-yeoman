@@ -1,0 +1,39 @@
+<div class="search-results-wrapper clearfix">
+  <div class="search-facets col-md-2">
+    <h3>Show:</h3>
+    <ul class="facets">
+      <li>
+        <label>Artists</label>
+        {{view Ember.Checkbox checkedBinding="artistsIsChecked"}}
+      </li>
+      <li>
+        <label>Songs</label>
+        {{view Ember.Checkbox checkedBinding="songsIsChecked"}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="results col-md-10">
+    {{#if artistsIsChecked}}
+      {{#if artists.length}}
+        <h3>Artists</h3>
+        <ul class="search-results artists">
+          {{#each artists}}
+            <li>{{#link-to 'artist' enid}}{{name}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    {{/if}}
+
+    {{#if songsIsChecked}}
+      {{#if songs.length}}
+        <h3>Songs</h3>
+        <ul class="search-results songs">
+          {{#each songs}}
+            <li>{{#link-to 'song' enid}}"{{title}}," by {{artist_name}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>
