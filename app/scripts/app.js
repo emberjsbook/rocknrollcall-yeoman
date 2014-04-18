@@ -1,5 +1,6 @@
 var RocknrollcallYeoman = window.RocknrollcallYeoman = Ember.Application.create({
-  LOG_TRANSITIONS: true
+  LOG_TRANSITIONS: true,
+  LOG_ACTIVE_GENERATION: true
 });
 
 RocknrollcallYeoman.applicationName = "Rock'n'Roll Call";
