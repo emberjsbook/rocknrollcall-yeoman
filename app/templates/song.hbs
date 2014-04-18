@@ -1,0 +1,27 @@
+<div class="entity-song page-container">
+  <div class="song-lockup clearfix">
+    {{#if model.track}}
+      {{#if model.track.release_image}}
+        <img {{bind-attr src="model.track.release_image"}} class="pull-right">
+      {{/if}}
+    {{/if}}
+    <h3 class="fancy">{{model.title}}</h3>
+
+    <h4>
+      Artist: {{#link-to "artist" artist_id}}{{artist_name}}{{/link-to}}
+    </h4>
+    <h4>
+      Tags:
+      {{#each types}}
+        <span class="badge">{{.}}</span>
+      {{/each}}
+    </h4>
+    <h4>
+      Duration: <span id="song-duration" {{bind-attr data-duration=
+        "model.audio_summary.duration"}}></span>
+    </h4>
+    <h4>
+      Tempo: {{model.audio_summary.tempo}} <abbr>BPM</abbr>
+    </h4>
+  </div>
+</div>
