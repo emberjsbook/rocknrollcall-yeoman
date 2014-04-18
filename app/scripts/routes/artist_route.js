@@ -29,7 +29,7 @@ RocknrollcallYeoman.ArtistRoute = Ember.Route.extend({
           videos.push(entry.video[i]);
         }
 
-        return App.Artist.create({
+        return RocknrollcallYeoman.Artist.create({
           enid: entry.id,
           name: entry.name,
           hotttnesss: entry.hotttnesss,
