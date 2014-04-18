@@ -14,7 +14,9 @@
       <ul class="nav navbar-nav search-lockup">
         <li class="search-group">
           {{input type="text" class="search-input" placeholder="Search for artists or song names"}}
-          <button class="btn btn-primary"><i class="glyphicon glyphicon-play"></i></button>
+          <button {{action "submit"}} class="btn btn-primary">
+            <i class="glyphicon glyphicon-play"></i>
+          </button>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
