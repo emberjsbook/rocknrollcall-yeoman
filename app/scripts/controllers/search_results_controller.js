@@ -17,6 +17,7 @@ RocknrollcallYeoman.SearchResultsController = Em.ObjectController.extend({
 
       activity.save();
 
+      this.transitionToRoute('artist', model.enid);
     },
 
     viewedSong: function(model) {
@@ -33,6 +34,7 @@ RocknrollcallYeoman.SearchResultsController = Em.ObjectController.extend({
 
       activity.save();
 
+      this.transitionToRoute('song', model.enid);
     }
   }
 });
