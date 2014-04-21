@@ -19,7 +19,7 @@
         <h3>Artists</h3>
         <ul class="search-results artists">
           {{#each artists}}
-            <li>{{#link-to 'artist' enid}}{{name}}{{/link-to}}</li>
+            <li><a {{action 'viewedArtist' this }}>{{name}}</a></li>
           {{/each}}
         </ul>
       {{/if}}
@@ -30,7 +30,7 @@
         <h3>Songs</h3>
         <ul class="search-results songs">
           {{#each songs}}
-            <li>{{#link-to 'song' enid}}"{{title}}," by {{artist_name}}{{/link-to}}</li>
+            <li><a {{action 'viewedSong' this }}>"{{title}}," by {{artist_name}}</a></li>
           {{/each}}
         </ul>
       {{/if}}
