@@ -1,1 +1,3 @@
-RocknrollcallYeoman.ApplicationAdapter = DS.FixtureAdapter;
+RocknrollcallYeoman.ApplicationAdapter = DS.LSAdapter.extend({
+  namespace: 'rocknrollcall'
+});
