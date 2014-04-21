@@ -1,4 +1,7 @@
 RocknrollcallYeoman.Router.map(function() {
+  this.route('activity', {
+    path: 'activity'
+  });
   this.route('search-results', {
     path: 'search/:term'
   });
