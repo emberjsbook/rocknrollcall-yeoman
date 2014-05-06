@@ -1,5 +1,6 @@
 <h4>Total Activity Records: {{model.length}}</h4>
 
   {{#each}}
-    {{activity-log}}
+    {{activity-log display_id=display_id type=type display_name=display_name
+        hotttnesss=hotttnesss timestamp=timestamp }}
   {{/each}}
