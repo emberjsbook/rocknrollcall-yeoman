@@ -1,6 +1,6 @@
 RocknrollcallYeoman.SearchResultsRoute = Ember.Route.extend({
   model: function (query) {
-    return Promise.all([$.getJSON("http://developer.echonest.com/api/v4/artist/search?api_key=<YOUR-API-KEY>&format=json&results=10&bucket=images&bucket=hotttnesss&bucket=biographies&bucket=id:musicbrainz", { name: query.term }),$.getJSON("http://developer.echonest.com/api/v4/song/search?api_key=<YOUR-API-KEY>&format=json&results=10&bucket=id:7digital-US&bucket=audio_summary&bucket=song_hotttnesss&bucket=tracks&bucket=song_type", { title: query.term }) ]).then(function(jsonArray){
+    return Promise.all([$.getJSON("http://developer.echonest.com/api/v4/artist/search?api_key="+RocknrollcallYeoman.config.ECHO_NEST_API_KEY+"&format=json&results=10&bucket=images&bucket=hotttnesss&bucket=biographies&bucket=id:musicbrainz", { name: query.term }),$.getJSON("http://developer.echonest.com/api/v4/song/search?api_key="+RocknrollcallYeoman.config.ECHO_NEST_API_KEY+"&format=json&results=10&bucket=id:7digital-US&bucket=audio_summary&bucket=song_hotttnesss&bucket=tracks&bucket=song_type", { title: query.term }) ]).then(function(jsonArray){
       var artistResults = jsonArray[0].response.artists,
         songResults = jsonArray[1].response.songs,
         artists = [],

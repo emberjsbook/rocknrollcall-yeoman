@@ -3,6 +3,10 @@ var RocknrollcallYeoman = window.RocknrollcallYeoman = Ember.Application.create(
   LOG_ACTIVE_GENERATION: true
 });
 
+RocknrollcallYeoman.config = {
+  ECHO_NEST_API_KEY: "Your API key" // Get an API Key here: http://developer.echonest.com/account/register
+}
+
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/components/*');

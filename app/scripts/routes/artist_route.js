@@ -1,7 +1,7 @@
 RocknrollcallYeoman.ArtistRoute = Ember.Route.extend({
   model: function(params) {
 
-    var url = "http://developer.echonest.com/api/v4/artist/profile?api_key=<YOUR-API-KEY>&format=json&bucket=biographies&bucket=blogs&bucket=familiarity&bucket=hotttnesss&bucket=images&bucket=news&bucket=reviews&bucket=terms&bucket=urls&bucket=video&bucket=id:musicbrainz",
+    var url = "http://developer.echonest.com/api/v4/artist/profile?api_key="+RocknrollcallYeoman.config.ECHO_NEST_API_KEY+"&format=json&bucket=biographies&bucket=blogs&bucket=familiarity&bucket=hotttnesss&bucket=images&bucket=news&bucket=reviews&bucket=terms&bucket=urls&bucket=video&bucket=id:musicbrainz",
       obj = {"id": params.enid};
 
     return Ember.$.getJSON(url, obj)
