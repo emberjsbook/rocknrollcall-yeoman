@@ -1,7 +1,9 @@
 {
   "name": "rocknrollcall-yeoman",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "grunt-contrib-handlebars": "^0.9.3"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-copy": "~0.4.1",
